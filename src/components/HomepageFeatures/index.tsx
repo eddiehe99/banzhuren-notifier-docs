@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '较为易用',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        配置完成之后即可使用。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '关注于通知本身',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        能实现远程通知，节省班主任搬运通知的时间、精力、体力（特别是需要爬楼梯到班上的班主任）。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '自动传递家长留言',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        无需帮家长搬运留言到班上。
       </>
     ),
   },

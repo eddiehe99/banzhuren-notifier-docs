@@ -2,46 +2,29 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 介绍
 
-Let's discover **Docusaurus in less than 5 minutes**.
+本工具可部分实现 [希沃云班牌](https://www.seewo.com/article/detail/396) 的功能。
 
-## Getting Started
+## 能实现的功能
 
-Get started by **creating a new site**.
+- 班主任通知（记录在 Word 文档里）在课间自动在课室的电脑上展示
+- 自动抓取家长的留言到通知文档里，并随班主任的通知在课间自动展示
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 需要下载或者安装的东西
 
-### What you'll need
+- Python（可选）: [下载链接](https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe)
+  - 安装一路“Next”到底
+  - 安装完成之后，按住【win】再按【R】键
+  - 在弹出的【运行】窗口里输入`cmd`，回车
+  - 在弹出的黑色窗口里输入下面这行英文，回车
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+    ```bash
+    pip install request
+    ```
 
-## Generate a new site
+- 注册一个飞书账号（可选）
 
-Generate a new Docusaurus site using the **classic template**.
+## Warnning
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+此工具此前为本人担任班主任期间为方便工作而开发，暂未以“产品”形式发布，**易用性有待加强**。
