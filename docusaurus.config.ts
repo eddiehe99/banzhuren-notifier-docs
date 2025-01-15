@@ -98,22 +98,26 @@ const config: Config = {
               label: '指南',
               to: '/docs/intro',
             },
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
           ],
         },
         {
-          title: 'Community',
+          title: '联系',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: '邮件地址',
+              href: 'mailto:erheng.he@m.scnu.edu.cn',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: '邮件地址（备用）',
+              href: 'mailto:eddiehe99@foxmail.com',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: '开发人员',
+              href: 'https://eddiehe.super.site/introduction',
             },
           ],
         },
@@ -121,11 +125,11 @@ const config: Config = {
           title: '更多',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: '工具源码',
+              href: 'https://github.com/eddiehe99/banzhuren-notifier',
             },
             {
-              label: 'GitHub',
+              label: '文档源码',
               href: 'https://github.com/eddiehe99/banzhuren-notifier-docs',
             },
           ],

@@ -1,5 +1,6 @@
 ---
 slug: openning-configuration
+description: 教室电脑配置自动打开通知的指南。
 sidebar_position: 4
 ---
 

@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            开始使用 - 15min ⏱️
+            点我，15min ⏱️ 后即可使用
           </Link>
         </div>
       </div>

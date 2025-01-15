@@ -1,11 +1,12 @@
 ---
 slug: usage
+description: 班主任使用此工具传递通知的指南。
 sidebar_position: 3
 ---
 
 # 使用
 
-## 在教师电脑上
+## 在班主任电脑上
 
 1. 打开文件夹（`banzhuren-notifier`）
 2. 将通知 Word 模板 `2025-01-xx 通知.docx` 复制到【教师电脑】的共享文件夹中，如 `\\马冬梅\共享文件夹`

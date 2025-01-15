@@ -1,5 +1,6 @@
 ---
 slug: closing-configuration
+description: 教室电脑配置自动关闭通知的指南。
 sidebar_position: 5
 ---
 

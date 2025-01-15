@@ -1,11 +1,12 @@
 ---
-slug: 安装
+slug: installation
+description: 工具安装指南。
 sidebar_position: 2
 ---
 
 # 安装
 
-## 在教师电脑上
+## 在班主任电脑上
 
 1. 下载压缩文件（[点我！我是下载链接](../../banzhuren-notifier.zip)）
 2. 解压
