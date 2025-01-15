@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Banzhuren Notifier 文档',
+  title: 'Banzhuren Notifier',
   // tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -78,7 +78,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: '指南',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {

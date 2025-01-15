@@ -24,7 +24,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        能实现远程通知，节省班主任搬运通知的时间、精力、体力（特别是需要爬楼梯到班上的班主任）。
+        能实现远程通知，节省班主任（特别是需要爬楼梯到班上的班主任）传递通知的时间、精力、体力。
       </>
     ),
   },
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        无需帮家长搬运留言到班上。
+        无需肉身搬运家长留言到班上。
       </>
     ),
   },

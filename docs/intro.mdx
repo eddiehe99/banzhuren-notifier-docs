@@ -2,20 +2,30 @@
 sidebar_position: 1
 ---
 
+import React from 'react';
+
 # 介绍
+
+export const LanRequirement = ({}) => (
+  <span>
+    教室的电脑能使用共享（必须）
+  </span>
+);
 
 本工具可部分实现 [希沃云班牌](https://www.seewo.com/article/detail/396) 的功能。
 
 ## 能实现的功能
 
 - 班主任通知（记录在 Word 文档里）在课间自动在课室的电脑上展示
-- 自动抓取家长的留言到通知文档里，并随班主任的通知在课间自动展示
+- 可选：自动抓取家长的留言到通知文档里，并随班主任的通知在课间自动展示
 
-## 需要下载或者安装的东西
+## 需要的东西
+
+- **<LanRequirement></LanRequirement>**
 
 - Python（可选）: [下载链接](https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe)
-  - 安装一路“Next”到底
-  - 安装完成之后，按住【win】再按【R】键
+  - 安装一路【Next】到底
+  - 安装完成之后，按住【win】键，再按【R】键
   - 在弹出的【运行】窗口里输入`cmd`，回车
   - 在弹出的黑色窗口里输入下面这行英文，回车
 
@@ -28,3 +38,5 @@ sidebar_position: 1
 ## Warnning
 
 此工具此前为本人担任班主任期间为方便工作而开发，暂未以“产品”形式发布，**易用性有待加强**。
+
+**文档还未更新完成。**

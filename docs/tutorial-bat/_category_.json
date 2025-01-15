@@ -1,0 +1,9 @@
+{
+  "label": "自动传递通知",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug":"tutorial-bat",
+    "description": "15 minutes to learn the most important notifier feature."
+  }
+}
