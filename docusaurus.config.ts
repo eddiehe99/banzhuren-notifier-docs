@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -65,6 +65,12 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Declare some <meta> tags
+    metadata: [
+      { name: 'keywords', content: 'banzhuren，班主任，通知传递，家长留言搬运' },
+      { name: 'twitter:card', content: 'img/docusaurus-social-card.jpg' },
+      { name: 'description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+    ],
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
@@ -80,7 +86,7 @@ const config: Config = {
           position: 'left',
           label: '指南',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/eddiehe99/banzhuren-notifier-docs',
           label: 'GitHub',
@@ -131,6 +137,10 @@ const config: Config = {
             {
               label: '文档源码',
               href: 'https://github.com/eddiehe99/banzhuren-notifier-docs',
+            },
+            {
+              label: '☕BannatieNet',
+              href: 'https://www.eddiehe.top/bannatienet',
             },
           ],
         },
