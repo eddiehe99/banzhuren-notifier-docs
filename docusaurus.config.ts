@@ -27,7 +27,7 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
   },
 
@@ -131,16 +131,16 @@ const config: Config = {
           title: '更多',
           items: [
             {
+              label: '☕BannatieNet',
+              href: 'https://www.eddiehe.top/bannatienet',
+            },
+            {
               label: '工具源码',
               href: 'https://github.com/eddiehe99/banzhuren-notifier',
             },
             {
               label: '文档源码',
               href: 'https://github.com/eddiehe99/banzhuren-notifier-docs',
-            },
-            {
-              label: '☕BannatieNet',
-              href: 'https://www.eddiehe.top/bannatienet',
             },
           ],
         },
