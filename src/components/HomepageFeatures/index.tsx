@@ -15,25 +15,25 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        配置完成之后即可使用。
+        配置完成之后即可使用。一次配置，用一学期。
       </>
     ),
   },
   {
-    title: '关注于通知本身',
+    title: '自动传递班主任通知',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        能实现远程通知，节省班主任（特别是需要爬楼梯到班上的班主任）传递通知的时间、精力、体力。
+        关注于通知本身，能实现远程通知。节省班主任（特别是需要爬楼梯到班上的班主任）传递通知的时间、精力、体力。
       </>
     ),
   },
   {
-    title: '自动传递家长留言',
+    title: '自动搬运家长留言',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        无需肉身搬运家长留言到班上。
+        无需肉身搬运家长留言到班上。为班主任（特别是当晚没有晚修不在班甚至不在学校的班主任）省心。
       </>
     ),
   },

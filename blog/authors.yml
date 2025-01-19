@@ -1,23 +1,11 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+eddie:
+  name: Eddie He
+  title: Banzhuren Notifier 开发者及维护者
+  url: https://www.eddiehe.top
+  image_url: https://gitee.com/eddiehe99.png
+  email: erheng.he@m.scnu.edu.cn
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: eddiehe99
+    github: eddiehe99
+    newsletter: https://www.eddiehe.top

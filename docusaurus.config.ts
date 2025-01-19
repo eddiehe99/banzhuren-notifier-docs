@@ -48,6 +48,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -114,16 +116,16 @@ const config: Config = {
           title: '联系',
           items: [
             {
+              label: '开发人员',
+              to: '/blog/authors',
+            },
+            {
               label: '邮件地址',
               href: 'mailto:erheng.he@m.scnu.edu.cn',
             },
             {
               label: '邮件地址（备用）',
               href: 'mailto:eddiehe99@foxmail.com',
-            },
-            {
-              label: '开发人员',
-              href: 'https://eddiehe.super.site/introduction',
             },
           ],
         },
@@ -135,11 +137,11 @@ const config: Config = {
               href: 'https://www.eddiehe.top/bannatienet',
             },
             {
-              label: '工具源码',
+              label: 'banzhuren-notifier 工具源码',
               href: 'https://github.com/eddiehe99/banzhuren-notifier',
             },
             {
-              label: '文档源码',
+              label: '说明文档源码',
               href: 'https://github.com/eddiehe99/banzhuren-notifier-docs',
             },
           ],

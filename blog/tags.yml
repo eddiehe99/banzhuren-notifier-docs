@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+初始化:
+  label: 初始化
+  permalink: /initiation
+  description: 初始化相关 blog
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+测试:
+  label: 测试
+  permalink: /test
+  description: 测试相关 blog
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+功能:
+  label: 功能
+  permalink: /feature
+  description: 功能相关 blog
