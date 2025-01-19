@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="用于自动传递班主任通知，自动搬运家长留言。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
