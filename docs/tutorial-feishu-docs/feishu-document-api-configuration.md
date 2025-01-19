@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # 配置自动搬运家长留言
 
-## 在班主任的电脑上
+## 在班主任电脑上
 
 1. 将文件夹【`banzhuren-notifier`】里面 `cofiguration_template.txt` 重命名为 `configuration.txt`
 2. 打开 `configuration.txt`
@@ -44,7 +44,7 @@ sidebar_position: 4
     document_id=Ke6jdf477ohCVVxzANnc56WYnrd
     ```
 
-4. 按住【win】键，再按【Q】键
+4. 按住【Win】键，再按【Q】键
 5. 搜索【任务计划程序】，打开之后这个东西大概长这样（在下面的图片上按鼠标的【右键】可以放大看）：
 
     ![Task Scheduler](/img/task-scheduler.png)
@@ -112,7 +112,7 @@ sidebar_position: 4
 
 :::
 
-## 在班主任的电脑上（进阶）
+## 在班主任电脑上（进阶）
 
 ### 配置通知 Word 文档的【通知标题】
 
@@ -168,7 +168,7 @@ sidebar_position: 4
 
 :::
 
-## 在班主任的手机上（进阶）
+## 在班主任手机上（进阶）
 
 1. 班主任已经按上述步骤进行配置。
 2. **班主任的电脑开着！**
