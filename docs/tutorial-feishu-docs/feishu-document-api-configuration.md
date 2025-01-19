@@ -12,12 +12,6 @@ sidebar_position: 4
 2. 打开 `configuration.txt`
 3. 找到并填写如下几个值：
 
-    :::warning
-
-    暂时请勿修改【已填写】的值，如 `app_id` 和 `app_secret`。
-
-    :::
-
     ```bash
     notice_dir=
 
@@ -43,6 +37,12 @@ sidebar_position: 4
 
     document_id=Ke6jdf477ohCVVxzANnc56WYnrd
     ```
+
+    :::warning
+
+    暂时请勿修改其他值！
+
+    :::
 
 4. 按住【Win】键，再按【Q】键
 5. 搜索【任务计划程序】，打开之后这个东西大概长这样（在下面的图片上按鼠标的【右键】可以放大看）：
