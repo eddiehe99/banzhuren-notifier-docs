@@ -69,9 +69,18 @@ const config: Config = {
   themeConfig: {
     // Declare some <meta> tags
     metadata: [
+      { name: 'author', content: 'Eddie He' },
+      { name: 'icon', content: 'img/favicon.ico' },
       { name: 'keywords', content: 'banzhuren，班主任，通知传递，家长留言搬运' },
-      { name: 'twitter:card', content: 'img/docusaurus-social-card.jpg' },
       { name: 'description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+      { name: 'copyright', content: '© 2025 Eddie He' },
+      { property: 'og:description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+      { property: 'og:image', content: 'img/docusaurus-social-card.jpg' },
+      { property: 'og:url', content: 'https://banzhuren-notifier.eddiehe.top' },
+      { name: 'twitter:description', content: '用于自动传递班主任通知，以及自动搬运家长留言。' },
+      { name: 'twitter:image', content: 'img/docusaurus-social-card.jpg' },
+      { name: 'twitter:site', content: '@eddiehe99' },
+      { name: 'twitter:card', content: 'img/docusaurus-social-card.jpg' },
     ],
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -157,7 +166,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Eddie He. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://www.eddiehe.top/" target="_blank" rel="noopener noreferrer">Eddie He</a>. Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.`,
     },
     prism: {
       theme: prismThemes.github,
