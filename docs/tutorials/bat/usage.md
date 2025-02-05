@@ -24,6 +24,10 @@ sidebar_position: 3
 
 :::
 
+## 在教室电脑上
+
+通过 [配置自动打开通知](openning-configuration) 和 [配置自动关闭通知](closing-configuration)，能实现通知 Word 文档的【自动】打开和关闭，就不用麻烦电教委员了。
+
 ## 在班主任电脑上（进阶）
 
 可以将处理通知 Word 文档的共享文件夹，设置为【可编辑】。
@@ -37,7 +41,3 @@ sidebar_position: 3
 通过在线通知 Word 文档，同学们可以远程与班主任沟通，无需往返办公室，尤其避免了上下楼的不便，如：
 
 ![Students' Feedback Example](/img/students-feedback-example.png)
-
-## 在教室电脑上
-
-通过 [配置自动打开通知](openning-configuration) 和 [配置自动关闭通知](closing-configuration)，能实现通知 Word 文档的【自动】打开和关闭，就不用麻烦电教委员了。

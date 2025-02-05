@@ -3,8 +3,13 @@ import Admonition from '@theme/Admonition';
 
 export default function LanRequirement() {
     return (
-        <Admonition type="info" title="必须">
-            教室的电脑能使用共享【必须】。
-        </Admonition>
+        <div>
+            <Admonition type="info" title="必须">
+                教室的电脑和班主任的电脑，都【必须】能使用共享。
+            </Admonition>
+            <Admonition type="info" title="必须">
+                班主任的电脑【必须】保持开机。
+            </Admonition>
+        </div>
     );
 }

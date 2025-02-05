@@ -84,9 +84,15 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'tutorialsSidebar',
           position: 'left',
           label: '指南',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'toolsSidebar',
+          position: 'left',
+          label: '其他工具',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -104,7 +110,11 @@ const config: Config = {
           items: [
             {
               label: '指南',
-              to: '/docs/intro',
+              to: '/docs/tutorials/intro',
+            },
+            {
+              label: '其他工具',
+              to: '/docs/tools/intro',
             },
             {
               label: 'Blog',
@@ -134,7 +144,7 @@ const config: Config = {
           items: [
             {
               label: '☕BannatieNet',
-              href: 'https://www.eddiehe.top/bannatienet',
+              href: 'https://bannatienet.eddiehe.top',
             },
             {
               label: 'banzhuren-notifier 工具源码',
