@@ -73,7 +73,7 @@ sidebar_position: 4
 
     :::warning 建议
 
-    尽量不要设置成和【[自动传递班主任通知——配置自动打开通知](../tutorial-bat/openning-configuration)】中设置的时间冲突，有可能产生意料之外的错误。
+    尽量不要设置成和【[自动传递班主任通知——配置自动打开通知](../bat/openning-configuration.md)】中设置的时间冲突，有可能产生意料之外的错误。
 
     :::
 
