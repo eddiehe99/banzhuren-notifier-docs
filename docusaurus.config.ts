@@ -136,7 +136,7 @@ const config: Config = {
           items: [
             {
               label: '开发人员',
-              to: '/blog/authors',
+              to: '/blog/authors/eddie',
             },
             {
               label: '邮件地址',
@@ -144,7 +144,7 @@ const config: Config = {
             },
             {
               label: '邮件地址（备用）',
-              href: 'mailto:eddiehe99@foxmail.com',
+              href: 'mailto:eddie.he@foxmail.com',
             },
           ],
         },
