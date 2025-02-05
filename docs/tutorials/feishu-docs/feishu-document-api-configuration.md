@@ -8,8 +8,8 @@ sidebar_position: 4
 
 ## 在班主任电脑上
 
-1. 将文件夹【`banzhuren-notifier`】里面 `cofiguration_template.txt` 重命名为 `configuration.txt`
-2. 打开 `configuration.txt`
+1. 将文件夹【`banzhuren-notifier`】里面 `cofiguration_template.txt` 重命名为 `configuration.txt`。
+2. 打开 `configuration.txt`。
 3. 找到并填写如下几个值：
 
     ```bash
@@ -18,9 +18,9 @@ sidebar_position: 4
     document_id=
     ```
 
-    - `notice_dir` 为班主任电脑中，通知 Word 模板 `2025-01-xx 通知.docx` 所在的【绝对路径】
+    - `notice_dir` 为班主任电脑中，通知 Word 模板 `2025-01-xx 通知.docx` 所在的【绝对路径】。
 
-        - 您可以打开【我的电脑】，找到通知 Word 模板 `2025-01-xx 通知.docx` 所在的文件夹，直接复制顶上的地址
+        - 您可以打开【我的电脑】，找到通知 Word 模板 `2025-01-xx 通知.docx` 所在的文件夹，直接复制顶上的地址。
 
         ![获取 notice_dir](/img/copy-notice-dir.png)
 
@@ -44,41 +44,56 @@ sidebar_position: 4
 
     :::
 
-4. 按住【Win】键，再按【Q】键
-5. 搜索【任务计划程序】，打开之后这个东西大概长这样（在下面的图片上按鼠标的【右键】可以放大看）：
+4. 打开【任务计划程序】。
 
-    ![Task Scheduler](/img/task-scheduler.png)
+    - 如果任务栏有搜索框：
 
-6. 点击右边的【创建任务】
-7. 在弹出的窗口中，【常规】下面的【名称】随便填
-8. 点击【触发器】，点击【新建】
+        - 在任务栏的搜索框中，键入【任务计划程序】，然后选择【任务计划程序】。
+
+    - 如果任务栏无搜索框：
+
+        - 按住【Win】键，再按【Q】键。
+        - 在弹出来的搜索框中，键入【任务计划程序】，然后选择【任务计划程序】。
+
+    - 打开【任务计划程序】之后这个东西大概长这样（在下面的图片上按鼠标的【右键】可以放大看）：
+
+        ![Task Scheduler](/img/task-scheduler.png)
+
+5. 点击右边的【创建任务】。
+6. 在弹出的窗口中，【常规】下面的【名称】随便填。
+7. 点击【触发器】，点击【新建】。
 
     ![Create a Task](/img/create-a-task.png)
 
-9. 在弹出的【新建触发器】窗口中，设置你希望家长在 `家长留言自动通知文档（马冬梅）` 中通过【评论】写下的留言，什么时候被自动搬运到当天的班主任通知（如 `2025-01-02 通知.docx`）中。
+8. 在弹出的【新建触发器】窗口中，设置你希望家长在 `家长留言自动通知文档（马冬梅）` 中通过【评论】写下的留言，什么时候被自动搬运到当天的班主任通知（如 `2025-01-02 通知.docx`）中。
 
     比如，你希望从每天的 06:30 开始，每隔 30 min 就自动将家长通过【评论】写下的留言，自动搬运到当天的班主任通知中，那就设置成下面图片这样：
 
     ![Create a Feishu API Trigger](/img/create-a-feishu-api-trigger.png)
 
-    建议：尽量不要设置成和【[自动传递班主任通知——配置自动打开通知](../tutorial-bat/openning-configuration)】中设置的时间冲突，有可能产生意料之外的错误
-10. **上一步设置的【触发器】可以设置多个！**
+    :::warning 建议
 
-    如果您希望在很多个时刻自动搬运家长留言到班主任当天的通知中，就设置很多个对应的【触发器】
+    尽量不要设置成和【[自动传递班主任通知——配置自动打开通知](../tutorial-bat/openning-configuration)】中设置的时间冲突，有可能产生意料之外的错误。
 
-11. 设置完【触发器】之后，点击【操作】，点击【新建】
+    :::
+
+9. **上一步设置的【触发器】可以设置多个！**
+
+    如果您希望在很多个时刻自动搬运家长留言到班主任当天的通知中，就设置很多个对应的【触发器】。
+
+10. 设置完【触发器】之后，点击【操作】，点击【新建】。
 
     ![Operation](/img/operation.png)
 
-12. 在弹出来的【新建操作】窗口中，点击【浏览】
+11. 在弹出来的【新建操作】窗口中，点击【浏览】。
 
     ![Create an Operation](/img/create-an-operation.png)
 
-13. 找到在【班主任电脑】中的文件夹【`banzhuren-notifier`】中的 `run_feishu_server_api` 或者 `run_feishu_server_api.bat` 文件，点击【打开】
+12. 找到在【班主任电脑】中的文件夹【`banzhuren-notifier`】中的 `run_feishu_server_api` 或者 `run_feishu_server_api.bat` 文件，点击【打开】。
 
     ![Run Feishu Server API](/img/run-feishu-server-api.png)
 
-14. 一路【确定】回到【任务计划程序】界面
+13. 一路【确定】回到【任务计划程序】界面。
 
     ![Task Scheduler](/img/task-scheduler.png)
 
@@ -116,7 +131,7 @@ sidebar_position: 4
 
 ### 配置通知 Word 文档的【通知标题】
 
-1. 进入文件夹【`banzhuren-notifier`】
+1. 进入文件夹【`banzhuren-notifier`】。
 2. 打开 `configuration.txt`，您会发现：
 
     ```bash
@@ -143,7 +158,7 @@ sidebar_position: 4
 
 ### 配置“家长留言自动通知文档”（飞书文档）的【留言标题】
 
-1. 进入文件夹【`banzhuren-notifier`】
+1. 进入文件夹【`banzhuren-notifier`】。
 2. 打开 `configuration.txt`，您会发现：
 
     ```bash

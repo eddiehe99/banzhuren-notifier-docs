@@ -8,7 +8,7 @@ sidebar_position: 2
 
 :::note
 
-本页面步骤节选自微软官方指南：[如何使用远程桌面](https://support.microsoft.com/zh-cn/windows/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-5fe128d5-8fb1-7a23-3b8a-41e636865e8c)
+本页面步骤节选自微软官方指南：[如何使用远程桌面](https://support.microsoft.com/zh-cn/windows/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-5fe128d5-8fb1-7a23-3b8a-41e636865e8c)。
 
 :::
 
@@ -22,7 +22,7 @@ sidebar_position: 2
 
 ## 在教室电脑上
 
-1. 打开【远程桌面连接】
+1. 打开【远程桌面连接】。
 
     - 如果任务栏有搜索框：
 
@@ -30,7 +30,7 @@ sidebar_position: 2
 
     - 如果任务栏无搜索框：
 
-        - 按住【win】键，再按【Q】键
+        - 按住【Win】键，再按【Q】键。
         - 在弹出来的搜索框中，键入【远程桌面连接】，然后选择【远程桌面连接】。
 
 2. 在弹出来的【远程桌面连接】窗口中，键入您想要连接的共享计算机名（如 `马冬梅`）或者 ip（如：`10.50.89.179`），然后点击【连接】。

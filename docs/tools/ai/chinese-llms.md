@@ -33,6 +33,6 @@ sidebar_position: 2
 
 | 大模型名称 | 开发者 |
 |---|---|
-| [款科三问](http://59.110.222.95:5010/index) | 华侨大学 |
+| [跨科三问](http://59.110.222.95:5010/index) | 华侨大学 |
 | [九章大模型（MathGPT）](https://www.mathgpt.com/) | 好未来 |
 | [秘塔写作猫](https://xiezuocat.com/) | 秘塔 |
