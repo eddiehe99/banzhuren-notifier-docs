@@ -46,49 +46,55 @@ jobs:
         with:
           version: 10
 
-      - name: Get latest Python version
+      - name: Get all Python versions
         run: |
-          curl -s https://www.python.org/ftp/python/ | grep -oP '<a href="\K(\d+\.\d+\.\d+)(?=/">)' | sort -V | tail -n 1 > latest-version.txt
+          curl -s https://www.python.org/ftp/python/ | grep -oP '<a href="\K(\d+\.\d+\.\d+)(?=/">)' > all-versions.txt
 
-          - name: Find latest release version
-          run: |
-            latest_release=""
-            while read -r version; do
-              # 检查是否为预发布版本
-              if ! echo "$version" | grep -q "[a-zA-Z]"; then
-                if [ -z "$latest_release" ] || $(printf '%s\n' "$version" "$latest_release" | sort -V | tail -n 1 | grep -q "$version"); then
-                  latest_release="$version"
-                fi
+      - name: Find latest release version
+        run: |
+          latest_release=""
+          while read -r version; do
+            # 检查是否为预发布版本
+            if ! echo "$version" | grep -q "[a-zA-Z]"; then
+              if [ -z "$latest_release" ] || $(printf '%s\n' "$version" "$latest_release" | sort -V | tail -n 1 | grep -q "$version"); then
+                latest_release="$version"
               fi
-            done < all-versions.txt
-            echo "$latest_release" > latest-release-version.txt
+            fi
+          done < all-versions.txt
+          echo "$latest_release" > latest-release-version.txt
 
       - name: Check download link availability
         run: |
-          latest_version=$(cat latest-release-version.txt)
-          base_url="https://www.python.org/ftp/python/${latest_version}"
+          latest_release_version=$(cat latest-release-version.txt)
+          base_url="https://www.python.org/ftp/python/${latest_release_version}"
           # 这里以 amd64 为例，你可以根据需要扩展到其他架构
-          download_url="${base_url}/python-${latest_version}-amd64.exe"
+          download_url="${base_url}/python-${latest_release_version}-amd64.exe"
           response=$(curl -s -o /dev/null -w "%{http_code}" "$download_url")
           if [ "$response" -eq 200 ]; then
             echo "download_url=$download_url" >> $GITHUB_OUTPUT
           else
-            echo "No valid download link found for version $latest_version"
+            echo "No valid download link found for version $latest_release_version"
             exit 1
           fi
         id: check-download
 
-      - name: Update latest-python-version.json
+      - name: Update latest-python-release-version.json
         run: |
-          LATEST_VERSION=$(cat latest-version.txt)
-          echo "{\"latestVersion\": \"$LATEST_VERSION\"}" > latest-python-version.json
+          LATEST_RELEASE_VERSION=$(cat latest-release-version.txt)
+          echo "{\"latestReleaseVersion\": \"$LATEST_RELEASE_VERSION\"}" > latest-python-release-version.json
 
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add latest-python-version.json
+          git add latest-python-release-version.json
           git commit -m "Update latest Python version" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+
+      - name: Clean up
+        if: always()
+        run: |
+          rm -f all-versions.txt
+          rm -f latest-release-version.txt

@@ -1,7 +1,7 @@
 // src/components/LatestPythonDownload.js
 import React, { useEffect, useState } from 'react';
 import Link from '@docusaurus/Link';
-import latestPythonVersion from '../../latest-python-version.json';
+import latestPythonVersion from '../../latest-python-release-version.json';
 
 const LatestPythonDownload = () => {
     const [latestVersion, setLatestVersion] = useState(latestPythonVersion.latestVersion);
