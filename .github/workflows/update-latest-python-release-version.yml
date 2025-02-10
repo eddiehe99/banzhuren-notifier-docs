@@ -52,11 +52,11 @@ jobs:
 
       - name: Filter release versions
         run: |
-          while read -r version; do
-            if ! echo "$version" | grep -q "[a-zA-Z]"; then
-              echo "$version" >> release-versions.txt
-            fi
-          done < all-versions.txt
+          # 过滤掉包含字母的版本号
+          grep -v '[a-zA-Z]' all-versions.txt > release-versions.txt
+          # 对版本号进行排序，新版本排在前面
+          sort -r -t. -k1,1n -k2,2n -k3,3n release-versions.txt > sorted-release-versions.txt
+          mv sorted-release-versions.txt release-versions.txt
 
       - name: Check download link availability
         run: |
