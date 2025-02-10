@@ -1,4 +1,4 @@
-name: Update Latest Python Version
+name: Update Latest Python Release Version
 
 on:
   schedule:
@@ -50,37 +50,37 @@ jobs:
         run: |
           curl -s https://www.python.org/ftp/python/ | grep -oP '<a href="\K(\d+\.\d+\.\d+)(?=/">)' > all-versions.txt
 
-      - name: Find latest release version
+      - name: Filter release versions
         run: |
-          latest_release=""
           while read -r version; do
-            # 检查是否为预发布版本
             if ! echo "$version" | grep -q "[a-zA-Z]"; then
-              if [ -z "$latest_release" ] || $(printf '%s\n' "$version" "$latest_release" | sort -V | tail -n 1 | grep -q "$version"); then
-                latest_release="$version"
-              fi
+              echo "$version" >> release-versions.txt
             fi
           done < all-versions.txt
-          echo "$latest_release" > latest-release-version.txt
 
       - name: Check download link availability
         run: |
-          latest_release_version=$(cat latest-release-version.txt)
-          base_url="https://www.python.org/ftp/python/${latest_release_version}"
-          # 这里以 amd64 为例，你可以根据需要扩展到其他架构
-          download_url="${base_url}/python-${latest_release_version}-amd64.exe"
-          response=$(curl -s -o /dev/null -w "%{http_code}" "$download_url")
-          if [ "$response" -eq 200 ]; then
-            echo "download_url=$download_url" >> $GITHUB_OUTPUT
-          else
-            echo "No valid download link found for version $latest_release_version"
+          found=false
+          while read -r version; do
+            base_url="https://www.python.org/ftp/python/${version}"
+            # 这里以 amd64 为例，你可以根据需要扩展到其他架构
+            download_url="${base_url}/python-${version}-amd64.exe"
+            response=$(curl -s -o /dev/null -w "%{http_code}" "$download_url")
+            if [ "$response" -eq 200 ]; then
+              echo "latest_release_version=$version" >> $GITHUB_OUTPUT
+              found=true
+              break
+            fi
+          done < release-versions.txt
+          if [ "$found" = false ]; then
+            echo "No valid download link found for any release version."
             exit 1
           fi
         id: check-download
 
       - name: Update latest-python-release-version.json
         run: |
-          LATEST_RELEASE_VERSION=$(cat latest-release-version.txt)
+          LATEST_RELEASE_VERSION="${{ steps.check-download.outputs.latest_release_version }}"
           echo "{\"latestReleaseVersion\": \"$LATEST_RELEASE_VERSION\"}" > latest-python-release-version.json
 
       - name: Commit and push changes
