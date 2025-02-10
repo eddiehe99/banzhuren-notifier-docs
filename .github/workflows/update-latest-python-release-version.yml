@@ -52,11 +52,16 @@ jobs:
 
       - name: Filter release versions
         run: |
-          # 过滤掉包含字母的版本号
-          grep -v '[a-zA-Z]' all-versions.txt > release-versions.txt
-          # 对版本号进行排序，新版本排在前面
-          sort -r -t. -k1,1n -k2,2n -k3,3n release-versions.txt > sorted-release-versions.txt
-          mv sorted-release-versions.txt release-versions.txt
+          while read -r version; do
+            if ! echo "$version" | grep -q "[a-zA-Z]"; then
+              echo "$version" >> release-versions.txt
+            fi
+          done < all-versions.txt
+
+      - name: Sort release versions
+        run: |
+          # 使用 sort 命令按版本号排序，使用版本号排序的关键是使用 -V 选项
+          sort -r -V release-versions.txt -o sorted-release-versions.txt
 
       - name: Check download link availability
         run: |
@@ -73,7 +78,7 @@ jobs:
               found=true
               break
             fi
-          done < release-versions.txt
+          done < sorted-release-versions.txt
           if [ "$found" = false ]; then
             echo "No valid download link found for any release version."
             exit 1
