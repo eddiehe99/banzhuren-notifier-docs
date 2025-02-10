@@ -60,12 +60,14 @@ jobs:
 
       - name: Check download link availability
         run: |
+          set -x
           found=false
           while read -r version; do
             base_url="https://www.python.org/ftp/python/${version}"
             # 这里以 amd64 为例，你可以根据需要扩展到其他架构
             download_url="${base_url}/python-${version}-amd64.exe"
             response=$(curl -s -o /dev/null -w "%{http_code}" "$download_url")
+            echo "Checking version $version, response code: $response"
             if [ "$response" -eq 200 ]; then
               echo "latest_release_version=$version" >> $GITHUB_OUTPUT
               found=true
