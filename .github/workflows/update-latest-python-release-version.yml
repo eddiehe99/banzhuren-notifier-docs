@@ -2,7 +2,7 @@ name: Update Latest Python Release Version
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天运行一次
+    - cron: '0 0 1 * *' # 每月第一天运行一次
   workflow_dispatch:
 
 jobs:
@@ -88,7 +88,7 @@ jobs:
       - name: Update latest-python-release-version.json
         run: |
           LATEST_RELEASE_VERSION="${{ steps.check-download.outputs.latest_release_version }}"
-          echo "{\"latestReleaseVersion\": \"$LATEST_RELEASE_VERSION\"}" > latest-python-release-version.json
+          echo "{\"latestPythonReleaseVersion\": \"$LATEST_RELEASE_VERSION\"}" > latest-python-release-version.json
 
       - name: Commit and push changes
         run: |
@@ -105,3 +105,34 @@ jobs:
         run: |
           rm -f all-versions.txt
           rm -f latest-release-version.txt
+
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      - name: Build website
+        run: ${{ steps.detect-package-manager.outputs.runner }} run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+  
+    deploy:
+      name: Deploy to GitHub Pages
+      needs: build
+  
+      # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+      permissions:
+        pages: write # to deploy to Pages
+        id-token: write # to verify the deployment originates from an appropriate source
+  
+      # Deploy to the github-pages environment
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+  
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
