@@ -12,7 +12,7 @@ sidebar_position: 2
 |---|---|
 | [智谱清言](https://chatglm.cn/) | 智谱AI（清华） |
 | [百小应](https://ying.baichuan-ai.com/) | 百川智能 |
-| [天工AI](https://www.tiangong.cn/) | 昆仑万维 |
+| [天工AI](https://www.tiangong.cn/chat/universal/016) | 昆仑万维 |
 | [跃问](https://yuewen.cn/chats/new) | 阶跃星辰 |
 | [海螺AI](https://hailuoai.com/) | MiniMax（稀宇科技） |
 | [商量](https://chat.sensetime.com/) | 商汤科技 |

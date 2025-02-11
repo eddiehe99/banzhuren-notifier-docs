@@ -12,3 +12,8 @@
   label: 功能
   permalink: /feature
   description: 功能相关 blog
+
+维护:
+  label: 维护
+  permalink: /maintenance
+  description: 维护相关 blog

@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+const docusaurusVersion = require('@docusaurus/core/package.json').version;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -166,7 +167,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://www.eddiehe.top/" target="_blank" rel="noopener noreferrer">Eddie He</a>. Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://www.eddiehe.top/" target="_blank" rel="noopener noreferrer">Eddie He</a>. Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus ${docusaurusVersion}</a>.`,
     },
     prism: {
       theme: prismThemes.github,
