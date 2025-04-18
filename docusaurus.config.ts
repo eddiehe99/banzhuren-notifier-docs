@@ -141,10 +141,6 @@ const config: Config = {
             },
             {
               label: '邮件地址',
-              href: 'mailto:erheng.he@m.scnu.edu.cn',
-            },
-            {
-              label: '邮件地址（备用）',
               href: 'mailto:eddie.he@foxmail.com',
             },
           ],
