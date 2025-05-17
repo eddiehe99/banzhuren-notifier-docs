@@ -100,6 +100,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: update-python-release-version
     if: ${{ needs.update-python-release-version.outputs.version_changed == 'true' }}
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
