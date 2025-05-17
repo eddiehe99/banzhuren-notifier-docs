@@ -53,13 +53,13 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      - name: Build website
-        run: |
-          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "yarn" ]; then
-            ${{ steps.detect-package-manager.outputs.runner }} build
-          else
-            ${{ steps.detect-package-manager.outputs.runner }} run build
-          fi
+      - name: Build website (pnpm/npm)
+        if: ${{ steps.detect-package-manager.outputs.manager != 'yarn' }}
+        run: ${{ steps.detect-package-manager.outputs.runner }} run build
+      
+      - name: Build website (yarn)
+        if: ${{ steps.detect-package-manager.outputs.manager == 'yarn' }}
+        run: ${{ steps.detect-package-manager.outputs.runner }} build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
