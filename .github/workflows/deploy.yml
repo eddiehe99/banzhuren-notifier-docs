@@ -54,7 +54,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build website
-        run: ${{ steps.detect-package-manager.outputs.runner }} run build
+        run: |
+          if [ "${{ steps.detect-package-manager.outputs.manager }}" = "yarn" ]; then
+            ${{ steps.detect-package-manager.outputs.runner }} build
+          else
+            ${{ steps.detect-package-manager.outputs.runner }} run build
+          fi
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
